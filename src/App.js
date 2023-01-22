@@ -1,31 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from './App.module.scss';
+import MyButton from "./UI/MyButton/MyButton";
+import MyInput from "./UI/MyInput/MyInput";
 
 function App() {
+    const [darkTheme, setdarkTheme] = useState(true);
+
     return (
         <div className={styles.App}>
             <div className={styles.weather_app_container}>
                 <header className={styles.header}>
                     <div className={styles.header_widgets}>
-                        <button><img src={require('./assets/images/icons/dashboard.png')} alt=""/></button>
-                        <button><img src={require('./assets/images/icons/notification.png')} alt=""/></button>
+                        <MyButton img={require('./assets/images/icons/dashboard.png')} bgOn={true}/>
+                        <MyButton img={require('./assets/images/icons/notification.png')} bgOn={true}/>
                         <div className={styles.user_location}>
-                            <button><img src={require('./assets/images/icons/location.png')} alt=""/>
-                            </button>
+                            <MyButton img={require('./assets/images/icons/location.png')}/>
                             <p>Moscow, <span>Russia</span></p>
                         </div>
                     </div>
                     <div className={styles.header_search}>
-                        <input type="text" className={styles.search_input} placeholder={'Search city'}/>
+                        <MyInput/>
                     </div>
                     <div className={styles.user_settings}>
                         <div className={styles.themes_btns}>
-                            <button>
-                                <img src={require('./assets/images/icons/sun-white.png')} alt=""/>
-                            </button>
-                            <button>
-                                <img src={require('./assets/images/icons/moon-yellow.png')} alt=""/>
-                            </button>
+                            <MyButton img={require('./assets/images/icons/sun-white.png')}/>
+                            <MyButton img={require('./assets/images/icons/moon-yellow.png')} active={darkTheme}/>
                         </div>
                         <div className={styles.user_img}>
                             Fdf

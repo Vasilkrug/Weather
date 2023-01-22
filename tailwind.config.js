@@ -5,11 +5,11 @@ module.exports = {
     extend: {
       colors : {
         bgBody:'#101014',
-        textColor:'#4C4B50',
+        textColor:'#858587',
         bgButtons:'#1E1E1E'
       },
       backgroundImage : {
-        searchIcon : "url(assets/images/icons/search.png)"
+        searchIcon : "url('/src/assets/images/icons/search.png')"
       }
     },
   },
