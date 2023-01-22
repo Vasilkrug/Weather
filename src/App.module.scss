@@ -2,7 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-bgBody text-textColor text-xl;
 
-.App {
+  .App {
 
+    .weather_app_container {
+      @apply mr-auto ml-auto max-w-7xl;
+
+      .header {
+        @apply p-10 flex justify-between self-center;
+
+        .header_widgets {
+          @apply flex gap-6;
+
+          .user_location {
+            @apply flex self-center gap-2;
+          }
+        }
+
+        .header_search {
+          @apply w-96;
+
+          .search_input {
+            @apply w-full px-14 py-1 text-[16px] border-none bg-bgButtons bg-searchIcon bg-no-repeat bg-[10px] bg-[length:24px_24px] rounded-3xl outline-zinc-600;
+          }
+        }
+
+        .user_settings {
+          @apply flex gap-8;
+
+          .themes_btns {
+            @apply flex justify-center rounded-3xl gap-8 border border-gray-600 w-28;
+          }
+
+          .user_img {
+
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    @apply cursor-pointer;
+    img {
+      @apply w-6 h-6;
+    }
+  }
 }
+
+
