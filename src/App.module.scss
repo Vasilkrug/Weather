@@ -5,37 +5,6 @@ body {
 
     .weather_app_container {
       @apply mx-auto max-w-6xl;
-
-      .header {
-        @apply p-10 flex justify-between self-end;
-
-        .header_widgets {
-          @apply flex gap-6;
-
-          .user_location {
-            @apply flex self-center;
-            p {
-              @apply m-auto;
-            }
-          }
-        }
-
-        .header_search {
-          @apply w-96;
-        }
-
-        .user_settings {
-          @apply flex gap-8;
-
-          .themes_btns {
-            @apply flex justify-center rounded-3xl gap-0.5 border border-gray-800 min-w-max bg-bgButtons;
-          }
-
-          .user_img {
-
-          }
-        }
-      }
     }
   }
 

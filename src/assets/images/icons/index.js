@@ -1,0 +1,8 @@
+export const dashboard = require('./dashboard.png')
+export const location = require('./location.png')
+export const moon_black = require('./moon-black.png')
+export const moon_yellow = require('./moon-yellow.png')
+export const notification = require('./notification.png')
+export const search = require('./search.png')
+export const sun_white = require('./sun-white.png')
+export const sun_yellow = require('./sun-yellow.png')
