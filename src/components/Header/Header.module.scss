@@ -7,7 +7,11 @@
     .user_location {
       @apply flex self-center;
       p {
-        @apply m-auto;
+        @apply m-auto text-amber-50;
+
+        span {
+          @apply text-textColor;
+        }
       }
     }
   }

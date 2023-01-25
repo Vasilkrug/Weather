@@ -1,11 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MyButton from "../../UI/MyButton/MyButton";
 import {dashboard, location, moon_black, moon_yellow, notification, sun_white, sun_yellow} from "../../assets/images/icons";
 import MyInput from "../../UI/MyInput/MyInput";
 import {user_photo} from "../../assets/images";
 import styles from './Header.module.scss';
 
-const Header = ({darkTheme,darkThemeToggle}) => {
+const Header = ({darkTheme, darkThemeToggle, getWeather}) => {
+    const [inputValue, setInputValue] = useState('');
+
+    const inputHandler = (e) => {
+        setInputValue(e.target.value.toLowerCase())
+    }
+    const fetchToWeatherApi = (e) => {
+        if (e.key === 'Enter'){
+            getWeather(inputValue)
+            setInputValue('')
+        }
+    }
     return (
         <header className={styles.header}>
             <div className={styles.header_widgets}>
@@ -17,7 +28,7 @@ const Header = ({darkTheme,darkThemeToggle}) => {
                 </div>
             </div>
             <div className={styles.header_search}>
-                <MyInput/>
+                <MyInput inputValue={inputValue} inputHandler={inputHandler} fetchToWeatherApi={fetchToWeatherApi}/>
             </div>
             <div className={styles.user_settings}>
                 <div className={styles.themes_btns}>
